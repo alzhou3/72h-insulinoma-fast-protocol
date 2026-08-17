@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interactive Flow Chart</title>
+    <meta
+      name="description"
+      content="A lightweight static interface for stepping through and viewing bundled JSON flow charts."
+    >
+    <link rel="stylesheet" href="styles.css?v=20260816-toolbar-scroll-label">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">Interactive Flow Chart</p>
+          <h1 id="flow-title">Flow navigator</h1>
+          <p id="flow-description" class="subtle">
+            Move through the process step by step or inspect the full chart.
+          </p>
+          <div id="flow-links" class="link-list header-links"></div>
+        </div>
+      </header>
+
+      <nav class="tabs" aria-label="Primary interface">
+        <button id="sequence-tab" class="tab is-active" type="button" aria-controls="sequence-panel">
+          Sequence
+        </button>
+        <button id="chart-tab" class="tab" type="button" aria-controls="chart-panel">
+          Flow Chart
+        </button>
+      </nav>
+
+      <section id="status" class="status" role="status" aria-live="polite"></section>
+
+      <section id="sequence-panel" class="panel" aria-labelledby="sequence-tab">
+        <div class="sequence-layout">
+          <div id="sequence-stack" class="sequence-stack" aria-live="polite"></div>
+
+          <aside class="history-panel" aria-label="Process navigation">
+            <h2>Process</h2>
+            <ol id="process-nav" class="process-nav"></ol>
+          </aside>
+        </div>
+      </section>
+
+      <section id="chart-panel" class="panel is-hidden" aria-labelledby="chart-tab">
+        <div class="chart-layout">
+          <div class="chart-main">
+            <div class="chart-toolbar" aria-label="Flow chart zoom controls">
+              <button id="zoom-out" class="icon-button" type="button" aria-label="Zoom out" title="Zoom out">-</button>
+              <span id="zoom-label">Fit</span>
+              <button id="zoom-in" class="icon-button" type="button" aria-label="Zoom in" title="Zoom in">+</button>
+              <button id="zoom-fit" class="button secondary" type="button">Fit</button>
+              <label id="chart-image-picker" class="chart-image-picker is-hidden">
+                <span id="chart-image-picker-label"></span>
+                <select id="chart-image-select" aria-label="Select chart image"></select>
+              </label>
+            </div>
+            <div id="chart-viewport" class="chart-viewport">
+              <div id="chart-canvas" class="chart-canvas">
+                <svg id="chart-connectors" class="chart-connectors" aria-hidden="true"></svg>
+                <div id="chart-tree" class="chart-tree" aria-label="Flow chart"></div>
+              </div>
+            </div>
+          </div>
+          <aside class="detail-panel" aria-live="polite">
+            <div class="node-meta">
+              <span id="detail-type" class="node-type">Details</span>
+              <span id="detail-step-label">Selected item</span>
+            </div>
+            <h2 id="detail-title">Hover or focus a node</h2>
+            <p id="detail-question" class="question"></p>
+            <p id="detail-body" class="details">Node details and available actions will appear here.</p>
+            <div id="detail-actions" class="action-list detail-actions"></div>
+            <div id="detail-links" class="link-list"></div>
+            <div id="detail-routes" class="route-list"></div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <script src="flows/bundled-flows.js?v=20260816-toolbar-scroll-label"></script>
+    <script src="app.js?v=20260816-toolbar-scroll-label"></script>
+  </body>
+</html>

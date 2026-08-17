@@ -1,0 +1,807 @@
+{
+  "id": "72h_insulinoma_fast",  
+  "title": "72-hour supervised fast for insulinoma",
+  "description": "Monitoring and termination algorithm.",
+
+
+
+  "chartImages": [
+    {
+      "label": "",
+      "versions": [
+        {
+          "label": "Parallel",
+          "src": "flows/images/72h_insulinoma_fast-parallel.svg"
+        },
+        {
+          "label": "Linear",
+          "src": "flows/images/72h_insulinoma_fast-linear.svg"
+        }
+      ]
+    }
+  ],
+
+
+
+  "startId": "whipple_triad",
+  "nodes": {
+    "whipple_triad": {
+      "type": "decision",
+      "displayType": null,
+      "title": "Does the patient have current or prior documented Whipple's Triad?",
+      "question": null,
+      "details": "Symptoms of hypoglycemia, plasma glucose <55mg/dL concurrent with symptoms, and resolution of symptoms after plasma glucose is raised.",
+      "display": {
+        "navTitle": "Whipple's Triad"
+      },
+      "yes": "wt_init",
+      "no": "init"
+    },
+    "init": {
+      "type": "action",
+      "displayType": null,
+      "title": "Initiate 72-hour fast",
+      "question": "Obtain baseline labs for POC glucose and plasma glucose.",
+      "details": "Mark start time as time of last caloric or caffeine intake.",
+      "next": "fast_group"
+    },
+
+
+
+    "fast_group": {
+      "type": "group",
+      "displayType": null,
+      "title": "Monitor POC and plasma glucose in parallel for duration of fast.",
+      "details": "Ensure patient remains active during waking hours. Patient may consume calorie-free, caffeine-free beverages.",
+      "items": [
+        "POC_loop",
+        "plasma_loop",
+        "neuro",
+        "time"
+      ],
+      "display": {
+        "navTitle": "Glucose Monitoring"
+      },
+      "condition": {
+        "completeMode": "any",
+        "completeWhen": [
+          {
+            "source": "POC_loop",
+            "outcome": "complete"
+          },
+          {
+            "source": "plasma_loop",
+            "outcome": "complete"
+          },
+          {
+            "source": "neuro",
+            "answer": "yes"
+          },
+          {
+            "source": "time",
+            "answer": "yes"
+          }
+        ]
+      },
+      "next": "end_fast_group",
+      "nodes": {
+
+      
+      
+        "POC_loop": {
+          "type": "loop",
+          "displayType": null,
+          "title": null,
+          "details": null,
+          "layout": {
+            "width": "half"
+          },
+          "display": {
+            "showIterationCount": false,
+            "showInNavigation": false
+          },
+          "startId": "POC_loop_top",
+          "condition": {
+            "source": "POC_plasma",
+            "answers": {
+              "plasma_less_eq_55": "$complete"
+            }
+          },
+          "next": "$complete",
+          "nodes": {
+            "POC_loop_top":{
+              "type": "decision",
+              "displayType": null,
+              "title": "Patient POC glucose",
+              "details": "Select patient's most recent value.",
+              "answers": [
+                {
+                  "id": "POC_less_eq_55",
+                  "label": "POC glucose ≤ 45mg/dL",
+                  "description": null,
+                  "target": "POC_plasma",
+                  "size": "large",
+                  "variant": "primary"
+                },
+                {
+                  "id": "POC_less_eq_70_great_55",
+                  "label": "45mg/dL < POC glucose ≤ 70mg/dL",
+                  "description": null,
+                  "target": "POC_less_eq_70_great_55_action",
+                  "size": "large",
+                  "variant": "primary"
+                },
+                {
+                  "id": "POC_great_70",
+                  "label": "70mg/dL < POC glucose",
+                  "description": null,
+                  "target": "POC_great_70_action",
+                  "size": "large",
+                  "variant": "primary"
+                }
+              ]
+            },
+            "POC_great_70_action":{
+              "type": "action",
+              "displayType": null,
+              "title": "Obtain POC glucose q4h.",
+              "details": "May use calibrated CGM instead if patient has one.",
+              "next": "$repeat"
+            },
+            "POC_less_eq_70_great_55_action":{
+              "type": "action",
+              "displayType": null,
+              "title": "Obtain POC glucose q30min.",
+              "details": "May use calibrated CGM instead if patient has one.",
+              "next": "$repeat"
+            },
+            "POC_plasma":{
+              "type": "decision",
+              "displayType": null,
+              "title": "Patient plasma glucose",
+              "details": "Confirm with plasma glucose.",
+              "answers": [
+                {
+                  "id": "plasma_less_eq_55",
+                  "label": "Plasma glucose ≤ 45mg/dL",
+                  "description": null,
+                  "target": "$complete",
+                  "size": "large",
+                  "variant": "primary"
+                },
+                {
+                  "id": "plasma_less_eq_70_great_55",
+                  "label": "45mg/dL < plasma glucose ≤ 70mg/dL",
+                  "description": null,
+                  "target": "POC_plasma_less_eq_70_great_55_action",
+                  "size": "large",
+                  "variant": "primary"
+                },
+                {
+                  "id": "plasma_great_70",
+                  "label": "70mg/dL < plasma glucose",
+                  "description": null,
+                  "target": "POC_plasma_great_70_action",
+                  "size": "large",
+                  "variant": "primary"
+                }
+              ]
+            },
+            "POC_plasma_great_70_action":{
+              "type": "action",
+              "displayType": null,
+              "title": "Obtain POC glucose q4h.",
+              "details": "May use calibrated CGM instead if patient has one.",
+              "next": "$repeat"
+            },
+            "POC_plasma_less_eq_70_great_55_action":{
+              "type": "action",
+              "displayType": null,
+              "title": "Obtain POC glucose q30min.",
+              "details": "May use calibrated CGM instead if patient has one.",
+              "next": "$repeat"
+            }
+          }
+        },
+
+
+
+
+
+        "plasma_loop":{
+          "type": "loop",
+          "displayType": null,
+          "title": null,
+          "details": null,
+          "layout": {
+            "width": "half"
+          },
+          "display": {
+            "showIterationCount": false,
+            "showInNavigation": false
+          },
+          "startId": "plasma_loop_top",
+          "condition": {
+            "source": "plasma_loop_top",
+            "answers": {
+              "plasma_less_eq_55": "$complete"
+            }
+          },
+          "next": "$complete",
+          "nodes": {
+            "plasma_loop_top":{
+              "type": "decision",
+              "displayType": null,
+              "title": "Patient plasma glucose",
+              "details": "Select patient's most recent value.",
+              "answers": [
+                {
+                  "id": "plasma_less_eq_55",
+                  "label": "Plasma glucose ≤ 45mg/dL",
+                  "description": null,
+                  "target": "$complete",
+                  "size": "large",
+                  "variant": "primary"
+                },
+                {
+                  "id": "plasma_less_eq_60_great_55",
+                  "label": "45mg/dL < plasma glucose ≤ 60mg/dL",
+                  "description": null,
+                  "target": "plasma_less_eq_60_great_55_action",
+                  "size": "large",
+                  "variant": "primary"
+                },
+                {
+                  "id": "plasma_great_60",
+                  "label": "60mg/dL < plasma glucose",
+                  "description": null,
+                  "target": "plasma_great_60_action",
+                  "size": "large",
+                  "variant": "primary"
+                }
+              ]
+            },
+            "plasma_great_60_action":{
+              "type": "action",
+              "displayType": null,
+              "title": "Obtain labs for plasma glucose q6h.",
+              "next": "$repeat"
+            },
+            "plasma_less_eq_60_great_55_action":{
+              "type": "action",
+              "displayType": null,
+              "title": "Obtain labs for plasma glucose q1h. Obtain ONCE insulin, C-peptide, proinsulin, β-hydroxybutyrate.",
+              "next": "$repeat"
+            }
+          }
+        },
+
+
+
+        "neuro":{
+          "type": "decision",
+          "displayType": null,
+          "title": "Has the patient developed neuroglycopenic symptoms*?",
+          "question": "*confusion, mental status changes, visual changes",
+          "details": "Headache, hunger, feeling fatigued/weak would NOT count as sufficient symptoms as these are to be expected simply from fasting.",
+          "layout": {
+            "width": "full"
+          },
+          "display": {
+            "critical": true,
+            "showInNavigation": false
+          },
+          "answers": [
+            {
+              "id": "yes",
+              "label": "Yes",
+              "target": "$complete",
+              "variant": "primary"
+            }
+          ]
+        },
+        
+
+
+        "time":{
+          "type": "decision",
+          "displayType": null,
+          "title": "Elapsed fast time reached 72-hours?",
+          "question": null,
+          "details": null,
+          "layout": {
+            "width": "full"
+          },
+          "display": {
+            "showInNavigation": false
+          },
+          "answers": [
+            {
+              "id": "yes",
+              "label": "Yes",
+              "target": "$complete",
+              "variant": "primary"
+            }
+          ]
+        }
+
+      }
+    },
+
+
+
+    
+
+
+
+
+
+
+
+
+    "wt_init": {
+      "type": "action",
+      "displayType": null,
+      "title": "Initiate 72-hour fast",
+      "question": "Obtain baseline labs for POC glucose and plasma glucose.",
+      "details": "Mark start time as time of last caloric or caffeine intake.",
+      "next": "wt_fast_group"
+    },
+
+
+
+    "wt_fast_group": {
+      "type": "group",
+      "displayType": null,
+      "title": "Monitor POC and plasma glucose in parallel for duration of fast.",
+      "details": "Ensure patient remains active during waking hours. Patient may consume calorie-free, caffeine-free beverages.",
+      "items": [
+        "POC_loop",
+        "plasma_loop",
+        "neuro",
+        "time"
+      ],
+      "display": {
+        "navTitle": "Glucose Monitoring"
+      },
+      "condition": {
+        "completeMode": "any",
+        "completeWhen": [
+          {
+            "source": "POC_loop",
+            "outcome": "complete"
+          },
+          {
+            "source": "plasma_loop",
+            "outcome": "complete"
+          },
+          {
+            "source": "neuro",
+            "answer": "yes"
+          },
+          {
+            "source": "time",
+            "answer": "yes"
+          }
+        ]
+      },
+      "next": "end_fast_group",
+      "nodes": {
+
+      
+      
+        "POC_loop": {
+          "type": "loop",
+          "displayType": null,
+          "title": null,
+          "details": null,
+          "layout": {
+            "width": "half"
+          },
+          "display": {
+            "showIterationCount": false,
+            "showInNavigation": false
+          },
+          "startId": "POC_loop_top",
+          "condition": {
+            "source": "POC_plasma",
+            "answers": {
+              "plasma_less_eq_55": "$complete"
+            }
+          },
+          "next": "$complete",
+          "nodes": {
+            "POC_loop_top":{
+              "type": "decision",
+              "displayType": null,
+              "title": "Patient POC glucose",
+              "details": "Select patient's most recent value.",
+              "answers": [
+                {
+                  "id": "POC_less_eq_55",
+                  "label": "POC glucose ≤ 55mg/dL",
+                  "description": null,
+                  "target": "POC_plasma",
+                  "size": "large",
+                  "variant": "primary"
+                },
+                {
+                  "id": "POC_less_eq_70_great_55",
+                  "label": "55mg/dL < POC glucose ≤ 70mg/dL",
+                  "description": null,
+                  "target": "POC_less_eq_70_great_55_action",
+                  "size": "large",
+                  "variant": "primary"
+                },
+                {
+                  "id": "POC_great_70",
+                  "label": "70mg/dL < POC glucose",
+                  "description": null,
+                  "target": "POC_great_70_action",
+                  "size": "large",
+                  "variant": "primary"
+                }
+              ]
+            },
+            "POC_great_70_action":{
+              "type": "action",
+              "displayType": null,
+              "title": "Obtain POC glucose q4h.",
+              "details": "May use calibrated CGM instead if patient has one.",
+              "next": "$repeat"
+            },
+            "POC_less_eq_70_great_55_action":{
+              "type": "action",
+              "displayType": null,
+              "title": "Obtain POC glucose q30min.",
+              "details": "May use calibrated CGM instead if patient has one.",
+              "next": "$repeat"
+            },
+            "POC_plasma":{
+              "type": "decision",
+              "displayType": null,
+              "title": "Patient plasma glucose",
+              "details": "Confirm with plasma glucose.",
+              "answers": [
+                {
+                  "id": "plasma_less_eq_55",
+                  "label": "Plasma glucose ≤ 55mg/dL",
+                  "description": null,
+                  "target": "$complete",
+                  "size": "large",
+                  "variant": "primary"
+                },
+                {
+                  "id": "plasma_less_eq_70_great_55",
+                  "label": "55mg/dL < plasma glucose ≤ 70mg/dL",
+                  "description": null,
+                  "target": "POC_plasma_less_eq_70_great_55_action",
+                  "size": "large",
+                  "variant": "primary"
+                },
+                {
+                  "id": "plasma_great_70",
+                  "label": "70mg/dL < plasma glucose",
+                  "description": null,
+                  "target": "POC_plasma_great_70_action",
+                  "size": "large",
+                  "variant": "primary"
+                }
+              ]
+            },
+            "POC_plasma_great_70_action":{
+              "type": "action",
+              "displayType": null,
+              "title": "Obtain POC glucose q4h.",
+              "details": "May use calibrated CGM instead if patient has one.",
+              "next": "$repeat"
+            },
+            "POC_plasma_less_eq_70_great_55_action":{
+              "type": "action",
+              "displayType": null,
+              "title": "Obtain POC glucose q30min.",
+              "details": "May use calibrated CGM instead if patient has one.",
+              "next": "$repeat"
+            }
+          }
+        },
+
+
+
+
+
+        "plasma_loop":{
+          "type": "loop",
+          "displayType": null,
+          "title": null,
+          "details": null,
+          "layout": {
+            "width": "half"
+          },
+          "display": {
+            "showIterationCount": false,
+            "showInNavigation": false
+          },
+          "startId": "plasma_loop_top",
+          "condition": {
+            "source": "plasma_loop_top",
+            "answers": {
+              "plasma_less_eq_55": "$complete"
+            }
+          },
+          "next": "$complete",
+          "nodes": {
+            "plasma_loop_top":{
+              "type": "decision",
+              "displayType": null,
+              "title": "Patient plasma glucose",
+              "details": "Select patient's most recent value.",
+              "answers": [
+                {
+                  "id": "plasma_less_eq_55",
+                  "label": "Plasma glucose ≤ 55mg/dL",
+                  "description": null,
+                  "target": "$complete",
+                  "size": "large",
+                  "variant": "primary"
+                },
+                {
+                  "id": "plasma_less_eq_60_great_55",
+                  "label": "55mg/dL < plasma glucose ≤ 60mg/dL",
+                  "description": null,
+                  "target": "plasma_less_eq_60_great_55_action",
+                  "size": "large",
+                  "variant": "primary"
+                },
+                {
+                  "id": "plasma_great_60",
+                  "label": "60mg/dL < plasma glucose",
+                  "description": null,
+                  "target": "plasma_great_60_action",
+                  "size": "large",
+                  "variant": "primary"
+                }
+              ]
+            },
+            "plasma_great_60_action":{
+              "type": "action",
+              "displayType": null,
+              "title": "Obtain labs for plasma glucose q6h.",
+              "next": "$repeat"
+            },
+            "plasma_less_eq_60_great_55_action":{
+              "type": "action",
+              "displayType": null,
+              "title": "Obtain labs for plasma glucose q1h. Obtain ONCE insulin, C-peptide, proinsulin, β-hydroxybutyrate.",
+              "next": "$repeat"
+            }
+          }
+        },
+
+
+
+        "neuro":{
+          "type": "decision",
+          "displayType": null,
+          "title": "Has the patient developed neuroglycopenic symptoms*?",
+          "question": "*confusion, mental status changes, visual changes",
+          "details": "Headache, hunger, feeling fatigued/weak would NOT count as sufficient symptoms as these are to be expected simply from fasting.",
+          "layout": {
+            "width": "full"
+          },
+          "display": {
+            "critical": true,
+            "showInNavigation": false
+          },
+          "answers": [
+            {
+              "id": "yes",
+              "label": "Yes",
+              "target": "$complete",
+              "variant": "primary"
+            }
+          ]
+        },
+        
+
+
+        "time":{
+          "type": "decision",
+          "displayType": null,
+          "title": "Elapsed fast time reached 72-hours?",
+          "question": null,
+          "details": null,
+          "layout": {
+            "width": "full"
+          },
+          "display": {
+            "showInNavigation": false
+          },
+          "answers": [
+            {
+              "id": "yes",
+              "label": "Yes",
+              "target": "$complete",
+              "variant": "primary"
+            }
+          ]
+        }
+
+      }
+    },
+
+
+
+    
+    "end_fast_group": {
+      "type": "group",
+      "displayType": null,
+      "title": "End Fast",
+      "details": null,
+      "items": [
+        "step1",
+        "step2",
+        "step3",
+        "hypo_loop"
+      ],
+      "display": {
+        "navTitle": "End Fast"
+      },
+      "condition": {
+        "completeMode": "any",
+        "completeWhen": [
+          {
+            "source": "hypo_loop",
+            "outcome": "complete"
+          }
+        ]
+      },
+      "next": "end",
+      "nodes": {
+        "step1": {
+          "type": "action",
+          "displayType": null,
+          "title": "Step 1",
+          "question": "Collect the following labs:",
+          "details": "Plasma glucose, insulin, C-peptide, proinsulin, β-hydroxybutyrate, insulin antibodies, oral hypoglycemic agents.",
+          "layout": {
+            "width": "full"
+          },
+          "display": {
+            "showInNavigation": false
+          },
+          "next": null
+        },
+
+        "step2": {
+          "type": "action",
+          "displayType": null,
+          "title": "Step 2",
+          "question": "Administer glucagon 1mg IV.",
+          "details": null,
+          "layout": {
+            "width": "full"
+          },
+          "display": {
+            "showInNavigation": false
+          },
+          "next": null
+        },
+
+        "step3": {
+          "type": "action",
+          "displayType": null,
+          "title": "Step 3",
+          "question": "Obtain plasma glucose at 10min, 20min, 30min.",
+          "details": null,
+          "layout": {
+            "width": "full"
+          },
+          "display": {
+            "showInNavigation": false
+          },
+          "next": null
+        },
+        "hypo_loop": {
+          "type": "loop",
+          "displayType": null,
+          "title": null,
+          "details": null,
+          "layout": {
+            "width": "full"
+          },
+          "display": {
+            "showIterationCount": false,
+            "showInNavigation": false,
+            "showReset": false
+          },
+          "startId": "hypoglycemic",
+          "condition": {
+            "source": "diet_resumed",
+            "answers": {
+              "continue": "$complete"
+            }
+          },
+          "next": "$complete",
+          "nodes": {
+            "hypoglycemic": {
+              "type": "decision",
+              "displayType": null,
+              "title": "Is the patient hypoglycemic (<70mg/dL) at 30min?",
+              "question": null,
+              "details": null,
+              "layout": {
+                "width": "full"
+              },
+              "display": {
+                "showInNavigation": false
+              },
+              "answers": [
+                {
+                  "id": "yes",
+                  "label": "Yes",
+                  "target": "hypo_protocol",
+                  "variant": "primary"
+                },
+                {
+                  "id": "no",
+                  "label": "No",
+                  "target": "diet_resumed",
+                  "variant": "primary"
+                }
+              ]
+            },
+            "hypo_protocol": {
+              "type": "action",
+              "displayType": null,
+              "title": "Follow nursing protocol for hypoglycemia.",
+              "question": null,
+              "details": null,
+              "layout": {
+                "width": "full"
+              },
+              "display": {
+                "showInNavigation": false
+              },
+              "next": "diet_resumed"
+            },
+            "diet_resumed": {
+              "type": "action",
+              "displayType": null,
+              "title": "Baseline diet can be resumed.",
+              "question": null,
+              "details": null,
+              "layout": {
+                "width": "full"
+              },
+              "display": {
+                "showInNavigation": false
+              },
+              "answers": [
+                {
+                  "id": "continue",
+                  "label": "Continue",
+                  "target": "$continue",
+                  "variant": "primary"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+
+    
+
+    "end":{
+      "type": "end",
+      "displayType": null,
+      "title": "Protocol complete.",
+      "display": {
+        "showInNavigation": false
+      },
+      "question": null,
+      "details": null
+    }
+  }
+}

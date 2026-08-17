@@ -1,0 +1,316 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Page-1" id="ToIAlUzabJOxGL4dVa3l">
+    <mxGraphModel dx="4301" dy="1290" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-29" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="qG3cZXfvifMrs7uhOf8u-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="960" />
+              <mxPoint x="680" y="960" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-1" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fontStyle=1" value="Initiate protocol." vertex="1">
+          <mxGeometry height="80" width="160" x="360" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-28" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qG3cZXfvifMrs7uhOf8u-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-2" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fontSize=9;fontStyle=1" value="Does the patient have&lt;div&gt;current or prior documented&amp;nbsp;&lt;/div&gt;&lt;div&gt;Whipple&#39;s Triad?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="360" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-3" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;flipH=1;legacyAnchorPoints=0;" value="" vertex="1">
+          <mxGeometry height="80" width="40" x="540" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Symptoms of hypoglycemia, plasma glucose &amp;lt;55mg/dL concurrent with symptoms, and resolution of symptoms after plasma glucose is raised." vertex="1">
+          <mxGeometry height="80" width="160" x="600" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontStyle=1" value="Initiate 72-hour fast." vertex="1">
+          <mxGeometry height="80" width="160" x="360" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-6" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;flipH=1;legacyAnchorPoints=0;" value="" vertex="1">
+          <mxGeometry height="80" width="40" x="540" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Mark start time as time of last caloric or caffeine intake. Obtain baseline labs for POC glucose and plasma glucose." vertex="1">
+          <mxGeometry height="80" width="160" x="600" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-79" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;jumpStyle=arc;jumpSize=10;" target="qG3cZXfvifMrs7uhOf8u-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-8" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fontSize=10;fontStyle=1" value="&lt;div&gt;Has the patient&lt;/div&gt;&lt;div&gt;developed&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;neuroglycopenic&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;symptoms*?&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="600" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-9" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;flipH=1;legacyAnchorPoints=0;" value="" vertex="1">
+          <mxGeometry height="80" width="40" x="780" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;*confusion, mental status changes, visual changes&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(128, 128, 128);&quot;&gt;Headache, hunger, feeling fatigued/weak would NOT count as sufficient symptoms as these are to be expected simply from fasting.&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="840" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-78" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;jumpStyle=arc;jumpSize=10;" target="qG3cZXfvifMrs7uhOf8u-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-11" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fontSize=11;fontStyle=1" value="&lt;div&gt;Elapsed fast time&lt;/div&gt;&lt;div&gt;reached 72-hours?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="600" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-13" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fontStyle=1" value="Wait for new lab." vertex="1">
+          <mxGeometry height="80" width="160" x="600" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-33" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qG3cZXfvifMrs7uhOf8u-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="400" />
+              <mxPoint x="440" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-14" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.stored_data;whiteSpace=wrap;fontSize=10;fontStyle=1" value="Change POC glucose and plasma glucose&amp;nbsp;&lt;div&gt;threshold (highlighted in&amp;nbsp;&lt;/div&gt;&lt;div&gt;green) to &lt;span style=&quot;background-color: rgb(102, 255, 102);&quot;&gt;5&lt;/span&gt;&lt;span style=&quot;background-color: rgb(102, 255, 102);&quot;&gt;5mg/dL&lt;/span&gt;.&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="160" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-15" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fontSize=12;fontStyle=1" value="&lt;div&gt;POC glucose&lt;/div&gt;&lt;div&gt;≤ &lt;span style=&quot;background-color: rgb(102, 255, 102);&quot;&gt;45mg/dL&lt;/span&gt;?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="600" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-16" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fontSize=12;fontStyle=1" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;POC glucose&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;gt;&amp;nbsp;&lt;/span&gt;70mg/dL&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="600" y="1160" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-77" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qG3cZXfvifMrs7uhOf8u-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-17" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fontSize=12;fontStyle=1" value="&lt;div&gt;Plasma glucose&lt;/div&gt;&lt;div&gt;≤ &lt;span style=&quot;background-color: rgb(102, 255, 102);&quot;&gt;45mg/dL&lt;/span&gt;?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="360" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-71" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qG3cZXfvifMrs7uhOf8u-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-73" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qG3cZXfvifMrs7uhOf8u-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-18" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fontSize=12;fontStyle=1" value="Plasma glucose&lt;div&gt;&amp;gt; 60mg/dL&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="440" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-74" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qG3cZXfvifMrs7uhOf8u-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-75" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qG3cZXfvifMrs7uhOf8u-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-19" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fontSize=12;fontStyle=1" value="Plasma glucose&lt;div&gt;&amp;gt; 60mg/dL&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="960" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-48" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qG3cZXfvifMrs7uhOf8u-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="1520" />
+              <mxPoint x="1400" y="1520" />
+              <mxPoint x="1400" y="560" />
+              <mxPoint x="680" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontStyle=1" value="&lt;font&gt;Obtain POC glucose q4h and&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;plasma&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;glucose q6h.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="240" y="1400" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-47" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qG3cZXfvifMrs7uhOf8u-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="1520" />
+              <mxPoint x="1400" y="1520" />
+              <mxPoint x="1400" y="560" />
+              <mxPoint x="680" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontStyle=1" value="&lt;font&gt;Obtain POC glucose q4h and&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;plasma&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;glucose q1h.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="440" y="1400" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-46" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qG3cZXfvifMrs7uhOf8u-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="840" y="1520" />
+              <mxPoint x="1400" y="1520" />
+              <mxPoint x="1400" y="560" />
+              <mxPoint x="680" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontStyle=1" value="&lt;font&gt;Obtain POC glucose q30min and&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;plasma&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;glucose q6h.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="760" y="1400" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-45" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qG3cZXfvifMrs7uhOf8u-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1040" y="1520" />
+              <mxPoint x="1400" y="1520" />
+              <mxPoint x="1400" y="560" />
+              <mxPoint x="680" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-24" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontStyle=1" value="&lt;font&gt;Obtain POC glucose q30min and&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;plasma&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;glucose q1h*.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="960" y="1400" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-26" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;b&gt;*Obtain ONCE insulin, C-peptide, proinsulin, β-hydroxybutyrate.&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="200" x="1200" y="1400" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-27" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;flipH=1;legacyAnchorPoints=0;" value="" vertex="1">
+          <mxGeometry height="80" width="40" x="1140" y="1400" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-30" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="qG3cZXfvifMrs7uhOf8u-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-31" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="qG3cZXfvifMrs7uhOf8u-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-32" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="qG3cZXfvifMrs7uhOf8u-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-34" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="qG3cZXfvifMrs7uhOf8u-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-35" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="qG3cZXfvifMrs7uhOf8u-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-36" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="qG3cZXfvifMrs7uhOf8u-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-37" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="qG3cZXfvifMrs7uhOf8u-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-38" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="qG3cZXfvifMrs7uhOf8u-18">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="1200" />
+              <mxPoint x="520" y="1200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-39" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="qG3cZXfvifMrs7uhOf8u-18">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="1200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-40" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="qG3cZXfvifMrs7uhOf8u-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="880" y="1280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-50" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="YES" vertex="1">
+          <mxGeometry height="30" width="60" x="320" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-52" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="NO" vertex="1">
+          <mxGeometry height="30" width="60" x="430" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-53" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="YES" vertex="1">
+          <mxGeometry height="30" width="60" x="560" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-54" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="NO" vertex="1">
+          <mxGeometry height="30" width="60" x="670" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-55" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="YES" vertex="1">
+          <mxGeometry height="30" width="60" x="560" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-56" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="NO" vertex="1">
+          <mxGeometry height="30" width="60" x="670" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-57" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="YES" vertex="1">
+          <mxGeometry height="30" width="60" x="560" y="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-58" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="NO" vertex="1">
+          <mxGeometry height="30" width="60" x="670" y="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-59" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="YES" vertex="1">
+          <mxGeometry height="30" width="60" x="560" y="1170" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-60" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="NO" vertex="1">
+          <mxGeometry height="30" width="60" x="670" y="1230" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-63" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="YES" vertex="1">
+          <mxGeometry height="30" width="60" x="320" y="1090" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-64" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="NO" vertex="1">
+          <mxGeometry height="30" width="60" x="430" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-65" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="YES" vertex="1">
+          <mxGeometry height="30" width="60" x="400" y="1290" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-66" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="NO" vertex="1">
+          <mxGeometry height="30" width="60" x="510" y="1350" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-67" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="YES" vertex="1">
+          <mxGeometry height="30" width="60" x="910" y="1290" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-68" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="NO" vertex="1">
+          <mxGeometry height="30" width="60" x="1030" y="1350" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-95" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qG3cZXfvifMrs7uhOf8u-83">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-76" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontStyle=1" value="End Fast." vertex="1">
+          <mxGeometry height="80" width="160" x="40" y="1400" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-80" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;flipH=1;legacyAnchorPoints=0;" value="" vertex="1">
+          <mxGeometry height="80" width="40" x="780" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-81" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Ensure patient remains active during waking hours. Patient may consume calorie-free, caffeine-free beverages.&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="840" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-97" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qG3cZXfvifMrs7uhOf8u-84">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-82" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontStyle=1" value="&lt;div&gt;Step 2&lt;/div&gt;&lt;div&gt;Administer glucagon&lt;/div&gt;&lt;div&gt;1mg IV.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="40" y="1640" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-96" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qG3cZXfvifMrs7uhOf8u-82">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-83" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontStyle=1" value="&lt;div&gt;Step 1&lt;/div&gt;&lt;div&gt;Collect the following labs:&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(128, 128, 128); font-size: 8px;&quot;&gt;Plasma glucose, insulin, C-peptide, proinsulin, β-hydroxybutyrate, insulin antibodies, oral hypoglycemic agents.&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="40" y="1520" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-84" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontStyle=1" value="&lt;div&gt;Step 3&lt;/div&gt;&lt;div&gt;Obtain plasma glucose at 10min, 20min, 30min.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="40" y="1760" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-91" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qG3cZXfvifMrs7uhOf8u-88">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-92" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qG3cZXfvifMrs7uhOf8u-89">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-85" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fontSize=12;fontStyle=1" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Is the&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;patient hypoglycemic (&amp;lt;70mg/dL)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;at 30min?&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="40" y="1880" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-86" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="YES" vertex="1">
+          <mxGeometry height="30" width="60" y="1890" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-87" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="NO" vertex="1">
+          <mxGeometry height="30" width="60" x="110" y="1950" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-93" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qG3cZXfvifMrs7uhOf8u-89">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-80" y="2080" />
+              <mxPoint x="120" y="2080" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-88" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontStyle=1" value="Follow nursing protocol&lt;div&gt;for hypoglycemia.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="-160" y="1960" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-89" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontStyle=1" value="Baseline diet can&lt;div&gt;be resumed.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="40" y="2120" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-90" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;fontStyle=1" value="Protocol complete." vertex="1">
+          <mxGeometry height="80" width="160" x="40" y="2240" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-94" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="qG3cZXfvifMrs7uhOf8u-90">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qG3cZXfvifMrs7uhOf8u-98" edge="1" parent="1" source="qG3cZXfvifMrs7uhOf8u-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="qG3cZXfvifMrs7uhOf8u-85">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
